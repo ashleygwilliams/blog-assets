@@ -18,7 +18,12 @@ In future posts we will cover all the things that we will see here and a lot mor
 
 ### You can see the live application [here](https://ember-2-blog.firebaseapp.com/), and the source [here](https://github.com/ericdouglas/ember-simple-blog).
 
-1. Put an alias in your .bashrc:
+1. First you need to install [Ember-CLI](http://www.ember-cli.com/), that is the command-line interface for building Ember applications.
+```
+npm install -g ember-cli
+```
+
+1. (Optional) Put an alias in your .bashrc:
 ```
 alias ember='e'
 ```
