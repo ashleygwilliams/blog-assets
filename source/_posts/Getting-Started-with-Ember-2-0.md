@@ -12,7 +12,7 @@ Here we'll focus exclusively on the **how** to create an Ember 2.0 application.
 
 > This article was inspired by [this](https://medium.com/@jamesfuthey/8ef1f378ee4) one. Many thanks for [James Futhey](https://medium.com/@jamesfuthey).
 >
-> Read the original article to understand the **Why's**.
+> Read the original article to understand the **Whys**.
 
 In future posts we will cover all the things that we will see here and a lot more. Those articles will be part of a series called **Discovering Ember 2.0**!
 
