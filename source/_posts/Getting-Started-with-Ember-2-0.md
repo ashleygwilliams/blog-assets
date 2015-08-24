@@ -25,7 +25,7 @@ npm install -g ember-cli
 
 1. (Optional) Put an alias in your .bashrc:
 ```
-alias ember='e'
+alias e='ember'
 ```
 
 1. Create a new project with ember-cli: 
