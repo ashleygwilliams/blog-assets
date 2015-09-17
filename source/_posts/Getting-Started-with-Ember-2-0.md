@@ -14,8 +14,6 @@ Here we'll focus exclusively on the **how** to create an Ember 2.0 application.
 >
 > Read the original article to understand the **Whys**.
 
-In future posts we will cover all the things that we will see here and a lot more. Those articles will be part of a series called **Discovering Ember 2.0**!
-
 ### You can see the live application [here](https://ember-2-blog.firebaseapp.com/), and the source [here](https://github.com/ericdouglas/ember-simple-blog).
 
 1. First you need to install [Ember-CLI](http://www.ember-cli.com/), that is the command-line interface for building Ember applications.
@@ -340,6 +338,6 @@ e g component blog-post
 
 ### And that's it!
 
-I hope that you enjoy to build that simple but functional application with Ember 2.0. In our series "**Discovering Ember 2.0**" we will create lots of applications too, but I'll explain every detail to you.
+I hope that you enjoy to build that simple but functional application with Ember 2.0!
 
 Cheers! =)
