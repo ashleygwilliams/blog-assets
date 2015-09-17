@@ -18,7 +18,7 @@ For **each** functionality in the spec, we will have one article showing how to 
 
 ## Projects
 
-1. **[Link Manager API](https://github.com/ericdouglas/app-specs/blob/master/backend/beginner/link-manager-api.md)**
+1. **[Link Manager API](https://github.com/ericdouglas/link-manager-api)**
   - Defining your Node.js Environment
   - Link Manager API - Save a link
   - Link Manager API - Get all links
