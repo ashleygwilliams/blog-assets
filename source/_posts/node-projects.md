@@ -1,7 +1,7 @@
 title: Node Projects
 date: 2015-09-17 16:48:33
 tags:
-  nodejs
+  - nodejs
 ---
 
 ![Node Projects](http://i.imgur.com/tluoGKp.png)
