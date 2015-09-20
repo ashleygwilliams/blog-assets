@@ -27,7 +27,7 @@ After watching that (**excellent**) course, you can use this checklist to quickl
     git clone git@github.com:YOUR_USER_NAME/YOUR_REPOSITORY_NAME
     ```
 
-1. Ensure that you have node.js installed
+1. Ensure that you have [Node.js](https://nodejs.org) installed
 
 1. Set NPM properties:
   ```shell
