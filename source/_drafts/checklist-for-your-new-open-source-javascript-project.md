@@ -18,7 +18,7 @@ After watching that (**excellent**) course, you can use this checklist to quickl
   - More easy to test
   - More easy to reuse
 
-1. Create a repository for your libray:
+1. **Create a repository for your libray**:
   - Go to your git repository hosting service (here we'll use [GitHub](https://github.com/))
   - Create a new repository
   - Create a README file
@@ -27,12 +27,32 @@ After watching that (**excellent**) course, you can use this checklist to quickl
     git clone git@github.com:YOUR_USER_NAME/YOUR_REPOSITORY_NAME
     ```
 
-1. Ensure that you have [Node.js](https://nodejs.org) installed
+1. **Ensure that you have [Node.js](https://nodejs.org) installed**.
 
-1. Set NPM properties:
+1. **Set NPM properties**:
   ```shell
   npm set init-author-name 'Your name'
   npm set init-author-email 'Your email'
   npm set init-author-url 'http://yourdomain.com'
   npm set init-license 'MIT'
   ```
+
+1. **Save modules with an exactly version**:
+  ```shell
+  npm set save-exact true
+  ```
+
+1. **Login with your NPM account on terminal**:
+  ```shell
+  npm adduser
+  Username: YOUR_USER_NAME
+  Password: YOUR_PASSWORD
+  Email: YOUR_EMAIL@domain.com
+  ```
+  
+1. **Create a `package.json`**:
+  ```shell
+  npm init
+  ```
+
+1. Video 4
