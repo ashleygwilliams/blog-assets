@@ -102,3 +102,9 @@ After watching that (**excellent**) course, you can use this checklist to quickl
   - Publish to NPM with **--tag beta** . **Ex**: `npm publish --tag beta`
   - See if all is okay. `npm info <your-module-name>`
   - How to install a beta version: `npm install <module-name>@beta` (latest beta) or `npm install <module-name>@1.3.1-beta.3` (specific version)
+
+- **Setting up Unit Testing with Mocha and Chai**:
+  - Install mocha and chai `npm i -D mocha chai`
+  - Create your test file `src/index.test.js` or `src/index.spec.js`
+  - Update your package.json `"test": "mocha src/index.test.js -w"`
+  - Run `npm test`
