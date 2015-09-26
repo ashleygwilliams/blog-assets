@@ -85,9 +85,20 @@ After watching that (**excellent**) course, you can use this checklist to quickl
 - **Releasing a new version to NPM**:
   - Based on the type of change that you did in your code, you should bump the version of your module.
   - Use [Semantic Versioning](http://semver.org/) to bump the version correctly
-  - Commit the code. Ex: `git add` & `git commit`
-  - Add a new tag; Ex: `git tag 1.1.0`
-  - Push to GH (GitHub). `git push`
-  - Push the tags. `git push --tags`
-  - Republish to NPM. `npm publish`
+  - Commit the code `git add` & `git commit`
+  - Add a new tag `git tag 1.1.0`
+  - Push to GH (GitHub) `git push`
+  - Push the tags `git push --tags`
+  - Republish to NPM `npm publish`
+  - See if all is okay `npm info <your-module-name>`
+
+- **Publishing a beta version**:
+  - Do some stuff in your code
+  - Bump the version with the sufix `-beta.0`. **Ex**: `1.3.1-beta.3`
+  - Commit the code `git add` & `git commit`
+  - Add a new tag `git tag 1.1.0`
+  - Push to GH (GitHub) `git push`
+  - Push the tags `git push --tags`
+  - Publish to NPM with **--tag beta** . **Ex**: `npm publish --tag beta`
   - See if all is okay. `npm info <your-module-name>`
+  - How to install a beta version: `npm install <module-name>@beta` (latest beta) or `npm install <module-name>@1.3.1-beta.3` (specific version)
