@@ -7,18 +7,18 @@ tags:
 
 ![Open-source JavaScript](http://i.imgur.com/fIeyz2I.png)
 
-In this post, I'll synthesize the main lessons really well passed by [Kent C. Dodds](https://twitter.com/kentcdodds) in his series "How to Write an Open Source JavaScript Library". Check his course on egghead.io [here](https://egghead.io/series/how-to-write-an-open-source-javascript-library). 
+In this post, I'll synthesize the main lessons passed by [Kent C. Dodds](https://twitter.com/kentcdodds) in his series "How to Write an Open Source JavaScript Library". Check his course on [egghead.io](https://egghead.io/series/how-to-write-an-open-source-javascript-library). 
 
-After watching that (**excellent**) course, you can use this checklist to quickly refresh your mind and remember of each step you need to do in order to create your next open-source project.
+After watching that (**excellent**) course, you can use this checklist to quickly refresh your mind and remember each step that you need to do in order to create your next open-source project.
 
 ## Checklist
 
-1. **Prefer to write a micro-library**. Benefits:
+- **Prefer to write a micro-library**. Benefits:
   - More easy to reason about
   - More easy to test
   - More easy to reuse
 
-1. **Create a repository for your libray**:
+- **Create a repository for your libray**:
   - Go to your git repository hosting service (here we'll use [GitHub](https://github.com/))
   - Create a new repository
   - Create a README file
@@ -27,9 +27,9 @@ After watching that (**excellent**) course, you can use this checklist to quickl
     git clone git@github.com:YOUR_USER_NAME/YOUR_REPOSITORY_NAME
     ```
 
-1. **Ensure that you have [Node.js](https://nodejs.org) installed**.
+- **Ensure that you have [Node.js](https://nodejs.org) installed**.
 
-1. **Set NPM properties**:
+- **Set NPM properties**:
   ```shell
   npm set init-author-name 'Your name'
   npm set init-author-email 'Your email'
@@ -37,12 +37,12 @@ After watching that (**excellent**) course, you can use this checklist to quickl
   npm set init-license 'MIT'
   ```
 
-1. **Save modules with an exactly version**:
+- **Save modules with an exactly version**:
   ```shell
   npm set save-exact true
   ```
 
-1. **Login with your NPM account on terminal**:
+- **Login with your NPM account on terminal**:
   ```shell
   npm adduser
   Username: YOUR_USER_NAME
@@ -50,9 +50,44 @@ After watching that (**excellent**) course, you can use this checklist to quickl
   Email: YOUR_EMAIL@domain.com
   ```
   
-1. **Create a `package.json`**:
+- **Create a `package.json`**:
   ```shell
   npm init
   ```
 
-1. Video 4
+- **Create the main file**:
+  - Create the `src/index.js` file that will expose all the module's functionalities.
+  ```js
+  module.exports = {
+    funcOne: funcOne,
+    funcTwo: funcTwo
+  };
+  ```
+
+- **PROTIPs**:
+  - Install and save modules: `npm i -S module-name` is equal to `npm install --save module-name`
+  - Install and save dependency modules: `npm i -D module-name` is equal to `npm install --save-dev module-name`
+
+- **Add a .gitignore file**
+
+- **Push your changes to GitHub**
+
+- **Publish to NPM**: `npm publish`
+
+- **Releasing a version to GitHub**
+  ```sh
+  git tag 1.0.0
+  git push --tags
+  ```
+  - Go to *releases* on GitHub
+  - Draft a new release
+
+- **Releasing a new version to NPM**:
+  - Based on the type of change that you did in your code, you should bump the version of your module.
+  - Use [Semantic Versioning](http://semver.org/) to bump the version correctly
+  - Commit the code. Ex: `git add` & `git commit`
+  - Add a new tag; Ex: `git tag 1.1.0`
+  - Push to GH (GitHub). `git push`
+  - Push the tags. `git push --tags`
+  - Republish to NPM. `npm publish`
+  - See if all is okay. `npm info <your-module-name>`
