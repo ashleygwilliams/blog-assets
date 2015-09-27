@@ -288,4 +288,4 @@ After watching that (**excellent**) course, you can use this checklist to quickl
 
 **Good luck in your next Open Source JavaScript project**!!!
 
-> If you found something wrong, you can contribute to this article [here]().
+> If you found something wrong, you can contribute to this article [here](https://github.com/ericdouglas/blog-assets/blob/master/source/_posts/checklist-for-your-new-open-source-javascript-project.md).
