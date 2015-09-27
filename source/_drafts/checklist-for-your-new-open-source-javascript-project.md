@@ -106,5 +106,22 @@ After watching that (**excellent**) course, you can use this checklist to quickl
 - **Setting up Unit Testing with Mocha and Chai**:
   - Install mocha and chai `npm i -D mocha chai`
   - Create your test file `src/index.test.js` or `src/index.spec.js`
-  - Update your package.json `"test": "mocha src/index.test.js -w"`
+  - Update package.json `"test": "mocha src/index.test.js -w"`
   - Run `npm test`
+
+- **Automating Releases with semantic-release**:
+  - Install semantic-release `npm i -g semantic-release-cli`
+  - Setup semantic-release `semantic-release-cli setup`
+  - Setup your CI configuration file to run the tests before run semantic-release.
+    - Ex: `.travis.yml`
+    ```
+    # some stuff here
+
+    before_script:
+      - npm prune
+    script:
+      - npm run test
+    after_success:
+      - npm run semantic-release
+    ```
+    
