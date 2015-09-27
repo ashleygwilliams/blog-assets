@@ -190,3 +190,28 @@ After watching that (**excellent**) course, you can use this checklist to quickl
     ```
   - Add the `coverage` folder in the `.gitignore` file
   - Run `npm run test:single`
+
+- **Adding code coverage checking**:
+  - Check coverage with **ghook**:
+    ```json
+    "config": {
+      "ghooks": {
+        "pre-commit": "npm run test:single && npm run check-coverage"
+      }
+    }
+    ```
+  - Add check-coverage in npm scripts:
+    ```json
+    "scripts": {
+      "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100"
+    }
+    ```
+  - Add check-coverage to your CI config file:
+    - `.travis.yml`
+    ```json
+    script:
+      - npm run test:single
+      - npm run check-coverage
+    ```
+    
+    
