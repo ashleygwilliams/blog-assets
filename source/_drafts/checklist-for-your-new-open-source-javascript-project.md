@@ -156,4 +156,37 @@ After watching that (**excellent**) course, you can use this checklist to quickl
       - List break changes or issues closed by this change. **Ex**: *closes #1*
   - See if everything is ok `git log`
     
-    
+- **Committing a new feature with commitizen**:
+  - Create an issue on GitHub to be closed with that feature/commit
+  - Add a new feature and its test
+  - `git add`
+  - `npm run commit`
+  - Type of change: *feat* 
+  - Scope: *random*
+  - Short description: *Add ability to get an array of starwars names* 
+  - Longer description: *If you pass a number to the random function, you will receive an array with that number of random items* 
+  - List any break changes/issues closed: *closes #2* 
+  - Verify if everything is ok `git log`
+
+- **Automatically running tests before commits with ghooks**:
+  - Install **ghooks** `npm i -D ghooks`
+  - Configure ghooks in package.json:
+    ```json
+    "config": {
+      "ghooks": {
+        "pre-commit": "npm run test:single"
+      }
+    }
+    ```
+  - **ps**: *ghooks* will prevent us to commit bad code
+
+- **Adding code coverage recording with Istanbul**:
+  - `npm i -D istanbul`
+  - Set npm script to run Istanbul:
+    ```json
+    "scripts": {
+      "test:single": "istanbul cover -x *.test.js _mocha -- -R spec src/index.test.js"
+    }
+    ```
+  - Add the `coverage` folder in the `.gitignore` file
+  - Run `npm run test:single`
