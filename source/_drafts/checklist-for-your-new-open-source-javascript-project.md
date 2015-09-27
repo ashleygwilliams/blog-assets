@@ -1,4 +1,4 @@
-title: Checklist for your new open-source JavaScript Project
+title: Checklist for your new Open Source JavaScript Project
 tags:
   - open-source
   - javascript
@@ -7,9 +7,9 @@ tags:
 
 ![Open-source JavaScript](http://i.imgur.com/fIeyz2I.png)
 
-In this post, I'll synthesize the main lessons passed by [Kent C. Dodds](https://twitter.com/kentcdodds) in his series "How to Write an Open Source JavaScript Library". Check his course on [egghead.io](https://egghead.io/series/how-to-write-an-open-source-javascript-library). 
+In this post, I'll synthesize the lessons passed by [Kent C. Dodds](https://twitter.com/kentcdodds) in his series "How to Write an Open Source JavaScript Library". Check his course on [egghead.io](https://egghead.io/series/how-to-write-an-open-source-javascript-library). 
 
-After watching that (**excellent**) course, you can use this checklist to quickly refresh your mind and remember each step that you need to do in order to create your next open-source project.
+After watching that (**excellent**) course, you can use this checklist to quickly refresh your mind and remember each step that you need to do in order to create your next open source project.
 
 ## Checklist
 
@@ -130,7 +130,7 @@ After watching that (**excellent**) course, you can use this checklist to quickl
   - `npm i -D commitizen cz-conventional-changelog`
     - **commitizen**: allows to write commit messages
     - **cz-conventional-changelog**: Ask questions to generate the commit
-  - Add commitizen into npm scripts: 
+  - Add commitizen in npm scripts: 
     ```json
     "script": {
       "commit": "git-cz"
@@ -206,7 +206,7 @@ After watching that (**excellent**) course, you can use this checklist to quickl
       "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100"
     }
     ```
-  - Add check-coverage to your CI config file:
+  - Add check-coverage in your CI config file:
     - `.travis.yml`
     ```json
     script:
@@ -222,7 +222,7 @@ After watching that (**excellent**) course, you can use this checklist to quickl
       "report-coverage": "cat ./coverage/lcov.info | codecov"
     }
     ```
-  - Add report-coverage to your CI config file:
+  - Add report-coverage in your CI config file:
     - `.travis.yml`
     ```json
     after_success:
@@ -240,7 +240,7 @@ After watching that (**excellent**) course, you can use this checklist to quickl
 
 - **Adding ES6 Support**:
   - `npm i -D babel`
-  - Add a **build** task into npm scripts:
+  - Add a **build** task in npm scripts:
     ```json
     "scripts": {
       "build": "babel src/index.js -o dist/index.js"
@@ -253,7 +253,7 @@ After watching that (**excellent**) course, you can use this checklist to quickl
       "prebuild": "rm -rf dist && mkdir dist"
     }
     ```
-  - Add **build** to your CI config file:
+  - Add **build** in your CI config file:
     `.travis.yml`
     ```json
     script:
@@ -261,14 +261,14 @@ After watching that (**excellent**) course, you can use this checklist to quickl
       - npm run check-coverage
       - npm run build
     ```
-  - Add a **postbuild** task into npm scripts:
+  - Add a **postbuild** task in npm scripts:
     ```json
     "scripts": {
       "postbuild": "cp src/starwars-names.json dist/starwars-names.json"
     }
     ```
 
-- **Adding ES6 Support to Tests using Mocha and Babel**:
+- **Adding ES6 Support in Tests using Mocha and Babel**:
   - Update your **test** and **test:single** tasks on npm script:
   ```json
   "scripts": {
@@ -276,4 +276,15 @@ After watching that (**excellent**) course, you can use this checklist to quickl
     "test:single": "istanbul cover -x *.test.js _mocha -- -R spec src/index.test.js --compilers js:babel/register"
   }
   ```
-     
+
+- **Limit Built Branches on Travis**:
+  - Add the following code in your `.travis.yml`:
+    ```
+    branches:
+      only:
+        - master
+    ```
+
+**Good luck in your next Open Source JavaScript project**!!!
+
+> If you found something wrong, you can contribute to this article [here]().
