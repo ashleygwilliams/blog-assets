@@ -2,8 +2,9 @@ title: Checklist for your new Open Source JavaScript Project
 tags:
   - open-source
   - javascript
-
+date: 2015-09-27 17:13:15
 ---
+
 
 ![Open-source JavaScript](http://i.imgur.com/fIeyz2I.png)
 
