@@ -237,5 +237,43 @@ After watching that (**excellent**) course, you can use this checklist to quickl
     ```
     [![image description](shields.io link)](link the badge to the respective place)
     ```
-    
-    
+
+- **Adding ES6 Support**:
+  - `npm i -D babel`
+  - Add a **build** task into npm scripts:
+    ```json
+    "scripts": {
+      "build": "babel src/index.js -o dist/index.js"
+    }
+    ```
+  - Change the "main" file in your package.json to `dist/index.js`
+  - Add a **prebuild** task into npm scripts:
+    ```json
+    "scripts": {
+      "prebuild": "rm -rf dist && mkdir dist"
+    }
+    ```
+  - Add **build** to your CI config file:
+    `.travis.yml`
+    ```json
+    script:
+      - npm run test:single
+      - npm run check-coverage
+      - npm run build
+    ```
+  - Add a **postbuild** task into npm scripts:
+    ```json
+    "scripts": {
+      "postbuild": "cp src/starwars-names.json dist/starwars-names.json"
+    }
+    ```
+
+- **Adding ES6 Support to Tests using Mocha and Babel**:
+  - Update your **test** and **test:single** tasks on npm script:
+  ```json
+  "scripts": {
+    "test": "mocha src/index.test.js -w --compilers js:babel/register",
+    "test:single": "istanbul cover -x *.test.js _mocha -- -R spec src/index.test.js --compilers js:babel/register"
+  }
+  ```
+     
