@@ -124,4 +124,36 @@ After watching that (**excellent**) course, you can use this checklist to quickl
     after_success:
       - npm run semantic-release
     ```
+   
+- **Writing conventional commits with commitizen**:
+  - [Angular git commit guidelines](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit) 
+  - `npm i -D commitizen cz-conventional-changelog`
+    - **commitizen**: allows to write commit messages
+    - **cz-conventional-changelog**: Ask questions to generate the commit
+  - Add commitizen into npm scripts: 
+    ```json
+    "script": {
+      "commit": "git-cz"
+    }
+    ```
+  - Configure **commitizen** to use **cz-conventional-changelog**. In `package.json`, add the following property:
+    ```json
+    "czConfig": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+    ```
+  - **ps**: I got a problem with the version 1.1.1 and 1.1.0 of the cz-conventional-changelog, [and other people too](https://github.com/commitizen/cz-conventional-changelog/issues/6). To fix it, I installed the version **1.0.1**, and worked properly.
+    ```sh
+    npm install cz-conventional-changelog@1.0.1 -D
+    ```
+  - Using commitizen:
+    - Add your changes `git add`
+    - `npm run commit`
+      - Choose the type of changes that you did. **Ex**: *chore*
+      - Choose the scope of the change. **Ex**: *releasing*
+      - Add a description. **Ex**: *Add travis config, conventional commit and semantic-release*
+      - Add a longer description
+      - List break changes or issues closed by this change. **Ex**: *closes #1*
+  - See if everything is ok `git log`
+    
     
