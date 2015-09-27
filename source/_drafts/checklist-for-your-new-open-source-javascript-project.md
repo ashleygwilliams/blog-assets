@@ -213,5 +213,29 @@ After watching that (**excellent**) course, you can use this checklist to quickl
       - npm run test:single
       - npm run check-coverage
     ```
+- **Add code coverage reporting**:
+  - Create an account at [codecov.io](https://codecov.io/) 
+  - `npm i -D codecov.io`
+  - Add **report-coverage** into npm scripts:
+    ```json
+    "scripts": {
+      "report-coverage": "cat ./coverage/lcov.info | codecov"
+    }
+    ```
+  - Add report-coverage to your CI config file:
+    - `.travis.yml`
+    ```json
+    after_success:
+      - npm run report-coverage
+      - npm run semantic-release
+    ```
+
+- **Adding badges to your README**:
+  - Go to [shields.io](http://shields.io/) 
+  - Choose your badges! :)
+  - Markdown structure to add badges: 
+    ```
+    [![image description](shields.io link)](link the badge to the respective place)
+    ```
     
     
