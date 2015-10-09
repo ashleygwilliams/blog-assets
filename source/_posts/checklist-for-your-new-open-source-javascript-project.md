@@ -38,7 +38,7 @@ After watching that (**excellent**) course, you can use this checklist to quickl
   npm set init-license 'MIT'
   ```
 
-- **Save modules with an exactly version**:
+- **Save modules with an exact version**:
   ```shell
   npm set save-exact true
   ```
